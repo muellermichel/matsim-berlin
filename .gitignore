@@ -22,3 +22,7 @@ hs_err_pid*
 
 *.DS_STORE
 /.DS_Store
+
+output*.txt
+build_output*.txt
+eventlog*.txt
