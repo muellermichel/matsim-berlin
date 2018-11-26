@@ -67,4 +67,6 @@ java \
 	-Dfile.encoding=UTF-8 \
 	-classpath "${classpath}" \
 	org.matsim.run.RunBerlinScenario \
-	${script_dir}/scenarios/berlin-v5.1-1pct/input/berlin-v5.1-1pct-1it.config.xml
+	${script_dir}/scenarios/berlin-v5.1-1pct/input/berlin-v5.1-1pct-1it.config.xml \
+	| tee -a output_${timestamp}.txt && :
+cat ./output_${timestamp}.txt | grep ETHZ

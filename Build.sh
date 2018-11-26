@@ -19,7 +19,7 @@ cd "${script_dir}"
 timestamp=$(date +"%Y-%m-%d-%H_%M")
 
 cd ../matsim
-mvn package -pl matsim -am -DskipTests | tee build_output_${timestamp}_np${np}.txt
+mvn -T 4 package -pl matsim -am -DskipTests | tee build_output_${timestamp}.txt
 
 cd "${script_dir}"
-mvn compile -DskipTests | tee build_output_${timestamp}_np${np}.txt
+mvn -T 4 compile -DskipTests | tee -a build_output_${timestamp}.txt
